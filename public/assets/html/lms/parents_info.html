@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko" class="lo_frame">
+<head>
+    <title>LG U+ 아이들 나라 - 메가존개발</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="title" content="유플러스 아이들나라 개발메인">
+    <meta name="description" content="전문가추천 학습시스템, 퀴즈백과 개발페이지 입니다">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="유플러스 아이들나라 개발메인">
+    <meta property="og:description" content="전문가추천 학습시스템, 퀴즈백과 개발페이지 입니다">
+    <meta property="og:url" content="../../iframe_demo.html">
+    <meta property="og:image" content="./img/favicon_16_lgu.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon_16_lgu.ico">
+
+    <!--lgu css-->
+    <link rel="stylesheet" type="text/css" href="../../addon/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../addon/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../addon/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jqueryui/1.12.1/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/daterangepicker/2.1.24/css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/timepicker/0.5.2/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jqueryui/1.12.1/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/1.10.12/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/1.10.12/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/fixedColumns/3.2.2/css/fixedColumns.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/select/1.2.0/css/select.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/buttons/1.2.2/css/buttons.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/buttons/1.2.2/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jstree/3.3.3/css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lgu/LGU_style_common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lgu/LGU_style_content.css" />
+
+    <!--new css-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>    
+<body class="ukids ">
+    
+    <div class="wrap_container">
+        <div class="cpnt_lnb">
+            <h1>LMS 어드민</h1>
+            <ul>
+                <li><a href="curriculum_form.html">커리큘럼 편성관리</a>
+                    <ul>
+                        <li><a href="curriculum_form.html">커리큘럼 편성</a></li>
+                        <li><a href="curriculum_setting.html">커리큘럼 설정</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="parents_info.html">부모알림장 관리</a>
+                    <ul>
+                        <li class="active"><a href="parents_info.html">학부모 유용정보</a></li>
+                        <li><a href="parents_banner.html">배너</a></li>
+                    </ul>
+                </li>
+                <li><a href="pet_setting.html">펫 관리</a>
+                    <ul>
+                        <li><a href="pet_setting.html">펫 설정</a></li>
+                        <li><a href="pet_list.html">펫 목록</a></li>
+                    </ul>
+                </li>
+                <li><a href="phrase_setting.html">문구 관리</a></li>
+            </ul>
+        </div>
+
+        <div class="cpnt_contents">
+            <div class="cpnt_title">
+                <h1>학부모 유용정보</h1>
+            </div>
+            
+            <!-- tab-content start -->
+            <div class="cpnt table-content">
+                <table id="datatable1" class="display opacity0" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="required">유용정보명</th>
+                            <th>사용여부</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>유용한정보 001</td>
+                            <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td>
+                        </tr>
+                        <tr> <td></td> <td>유용한정보 002</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 003</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 004</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 005</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 006</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 007</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 008</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 009</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 010</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        <tr> <td></td> <td>유용한정보 011</td> <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td> </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="cpnt btn-block">
+                    <ul class="list-inline pull-left">
+                        <li><button class="btn btn-default" type="button" data-toggle="modal" data-target="#modal-confirm-apply"><i class="fa fa-check" aria-hidden="true"></i><span>적용</span></button></li>
+                        <li><button class="btn btn-default" type="button" data-toggle="modal" data-target="#modal-confirm-del"><i class="fa fa-trash-o" aria-hidden="true"></i><span>삭제</span></button></li>
+                    </ul>
+                    <ul class="list-inline pull-right">
+                        <li>
+                            <!-- <button class="btn btn-primary"><i class="fa fa-plus"></i><span>등록</span></button> -->
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus"></i><span>등록</span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal custom start -->
+    <div class="cpnt modal fade in" id="modal-lg" tabindex="-1" role="dialog" aria-hidden="true" style="display:block;">
+        <div class="modal-dialog modal-lg modal-default">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>close</span></button>
+                    <h1 class="modal-title">학부모 유용정보 등록</h1>
+                </div>
+                <div class="modal-body">
+                    <table class="table-detail">
+                        <caption>디테일 테이블(1단)</caption>
+                        <colgroup>
+                            <col width="25%" />
+                            <col width="75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="required"><span>유용정보명</span></th>
+                                <td><input type="text" class="form-control" placeholder="필수 사항입니다." required></td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>유용한정보 링크</span></th>
+                                <td>
+                                    <table class="table-detail">
+                                        <caption>디테일 테이블(1단)</caption>
+                                        <colgroup>
+                                            <col width="25%" />
+                                            <col width="75%" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="required"><span>모바일</span></th>
+                                                <td><input type="url" class="form-control input-block" placeholder="필수 사항입니다." required value="https://"></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span>IPTV (QR 이미지)</span></th>
+                                                <td>
+                                                    <div class="input-imgView"></div>
+                                                    <input type="file" class="form-control" accept="image/*;capture=camera*" capture="camera">
+                                                    <input type="text" class="form-control"><button type="button" class="btn btn-inline" onclick="inputFile(this, 'imgView');"><span>파일선택</span></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>대표 이미지</span></th>
+                                <td><input type="text" class="form-control input-block" placeholder="필수 사항입니다." required></td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>추천유형명</span></th>
+                                <td><input type="text" class="form-control input-block" placeholder="필수 사항입니다." required></td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>타입</span></th>
+                                <td>
+                                    <div class="input-radio">
+                                        <label><input type="radio" class="form-control" name="rdo01" checked /><span>추천</span></label>
+                                        <label><input type="radio" class="form-control" name="rdo01" /><span>영어유치원</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="btn-block">
+                        <ul class="list-inline pull-right">
+                            <li><button class="btn btn-default" data-dismiss="modal" aria-hidden="true"><span>취소</span></button></li>
+                            <li><button class="btn btn-primary" data-toggle="modal" data-target="#modal-confirm-register"><span>등록</span></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal custom end -->
+
+    <!-- modal alert01 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-register" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>등록하시겠습니까?</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true" onclick="$('.cpnt.modal').removeClass('in').hide();">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert01 end -->
+
+    <!-- modal alert02 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-apply" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>적용하시겠습니까?</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert02 end -->
+
+    <!-- modal alert03 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-del" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>삭제하시겠습니까?</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true" onclick="$('.cpnt.modal').removeClass('in').hide();">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert03 end -->
+
+    <script type="text/javascript" src="../../addon/jquery/3.1.1/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../../addon/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/jqueryui/1.12.1/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/colresize/1.0.7/js/ColReorderWithResize.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/fixedColumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/select/1.2.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+
+    <script type="text/javascript"  src="../../js/lgu/LGU_js_common.js"></script>
+    <script type="text/javascript"  src="../../js/style.js" charset="UTF-8"></script>
+    <script type="text/babel">
+         $(document).ready(function() {
+
+             // datatables with checkbox
+            var table1 = $('#datatable1').DataTable({
+                dom: 'R<"dataTables_header"f<"dataTables_toolbar"ilB>>tp', // DOM layout order - (use colResize), filter, info, length, <"toolbar">, (use export Button), table, pagination
+                columnDefs: [{
+                        className: 'dt-checkbox',
+                        targets: 0,
+                        title: '<label><input type="checkbox" class="form-control" /><i class="fa fa-check-square"></i></label>',
+                        data: null,
+                        defaultContent: '<input type="checkbox" class="form-control" />',
+                        orderable: false
+                    }, // set checkbox
+                    {
+                        className: 'dt-center',
+                        targets: [1, 2]
+                    }, // text left align default, set center align columns
+                    {
+                        className: 'dt-right',
+                        targets: 2
+                    } //  set right align columns
+                ],
+                order: [
+                    [1, 'asc']
+                ], // set default sort column
+                buttons: [{
+                    extend: 'colvis', // column toggle menu button
+                    text: '<i class="fa fa-cog"></i>',
+                    postfixButtons: [{
+                        extend: 'colvisRestore',
+                        text: '초기화'
+                    }]
+                }],
+                language: { // customize texts and markup
+                    search: '<i class="fa fa-search"></i>_INPUT_',
+                    info: 'Total: <em>_TOTAL_</em>',
+                    zeroRecords: '찾을 수 없습니다',
+                    lengthMenu: '_MENU_<span>/ page</span>',
+                    infoEmpty: '찾을 수 없습니다',
+                    infoFiltered: "(filtered from _MAX_ total records)",
+                    paginate: {
+                        first: '<i class="fa fa-angle-double-left"></i>',
+                        previous: '<i class="fa fa-angle-left"></i>',
+                        next: '<i class="fa fa-angle-right"></i>',
+                        last: '<i class="fa fa-angle-double-right"></i>',
+                    }
+                },
+                lengthMenu: [
+                    [-1, 10, 30, 50, 100],
+                    ["All", 10, 30, 50, 100]
+                ], // page length option
+                iDisplayLength: 10, // default page length
+                initComplete: function( settings, json ) {
+                    $('table').removeClass('opacity0');
+                },
+                pagingType: 'full_numbers' // add pagination first, last button
+            });
+
+            // module buttons
+            /*new $.fn.dataTable.Buttons(table1, {
+                buttons: [{
+                    className: 'btn-module',
+                    text: '<i class="fa fa-plus"></i><span>추가</span>', // 'add row' favicon
+                    action: function(e, dt, node, conf) { // 'add row' button action
+                        alert('행 추가');
+                    }
+                }, {
+                    className: 'btn-module',
+                    text: '<i class="fa fa-minus"></i><span>삭제</span>', // 'delete row' favicon
+                    action: function(e, dt, node, conf) { // 'delete row' button action
+                        alert('행 삭제');
+                    }
+                }, {
+                    className: 'btn-module',
+                    extend: 'excel', // export button
+                    text: '<i class="fa fa-file-excel-o"></i><span>다운로드</span>' // 'excel' favicon
+                }]
+            });
+            table1.buttons(1, null).container().appendTo($(table1.table().container()).find('div.dataTables_header')).addClass('module-buttons');*/
+
+            // hide paging when not necessary
+            // $(table1.table().container()).find('div.dataTables_paginate').css('display', table1.page.info().pages <= 1 ? 'none' : 'block');
+            // table1.on('length.dt', function(e, settings, len) {
+            //     $(table1.table().container()).find('div.dataTables_paginate').css('display', table1.page.info().pages <= 1 ? 'none' : 'block');
+            // });
+
+            // customize sort arrow
+            table1.columns().iterator('column', function(ctx, idx) {
+                $(table1.column(idx).header()).append('<span class="sort-icon"/>');
+            });
+
+            // th asterisk
+            table1.columns().iterator('column', function(ctx, idx) {
+                if ($(table1.column(idx).header()).hasClass('required')) {
+                    $(table1.column(idx).header()).prepend('<span class="asterisk"/>')
+                };
+            });
+            
+            //버튼 위치 변경
+            table1.table().node().after($(table1.table().node()).parents(".dataTables_wrapper").next().clone()[0]);
+            $(table1.table().node()).parents(".dataTables_wrapper").next().remove();
+
+            // checkbox select
+            $('.dt-checkbox input:checkbox').on('click', function() {
+                if ($(this).prop('checked')) {
+                    $(this).parents('tr').addClass('selected');
+                } else {
+                    $(this).parents('tr').removeClass('selected');
+                };
+            });
+
+            // checkbox toggle all
+            $('th.dt-checkbox input:checkbox').change(function() {
+                console.log("aaa");
+                $(this).prop('checked') ? $(this).parents('thead').next('tbody').find('tr').addClass('selected') : $(this).parents('thead').next('tbody').find('tr').removeClass('selected');
+                $("input:checkbox").prop('checked', $(this).prop("checked"));
+            });
+
+         });
+    </script>
+    
+</body>
+</html>

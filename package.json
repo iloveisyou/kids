@@ -1,0 +1,82 @@
+{
+  "name": "kids_lms_admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@hookform/error-message": "^2.0.0",
+    "@material-ui/core": "^4.12.3",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/lab": "^5.0.0-alpha.74",
+    "@mui/material": "^5.5.2",
+    "@mui/styled-engine-sc": "^5.5.2",
+    "@mui/styles": "^5.5.1",
+    "@mui/system": "^5.5.2",
+    "@mui/x-data-grid": "^5.6.1",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
+    "classnames": "^2.3.1",
+    "env-cmd": "^10.1.0",
+    "gh-pages": "^3.2.3",
+    "immutable": "^4.0.0",
+    "moment": "^2.29.1",
+    "node-sass": "^7.0.1",
+    "notistack": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "open-color": "^1.9.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.28.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-observable": "^2.0.0",
+    "reselect": "^4.1.5",
+    "rxjs": "^7.5.5",
+    "sass-loader": "^12.6.0",
+    "styled-components": "^5.3.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "build:sass": "sass ./src/assets/sass/style.scss:./src/assets/sass/style.css  --style compressed",
+    "watch:sass": "sass --watch ./src/assets/sass/style.scss:./src/assets/sass/style.css  --style compressed",
+    "start": "react-scripts start",
+    "pub": "npm-run-all --parallel start watch:sass",
+    "start:dev": "env-cmd -f .env.development react-scripts start ",
+    "start:prod": "env-cmd -f .env.production react-scripts start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "build:dev": "env-cmd -f .env.development react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  },
+  "homepage": "https://mz-fivestring.github.io/kids_lms_admin_publ"
+}

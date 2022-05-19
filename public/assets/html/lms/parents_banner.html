@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko" class="lo_frame">
+<head>
+    <title>LG U+ 아이들 나라 - 메가존개발</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="title" content="유플러스 아이들나라 개발메인">
+    <meta name="description" content="전문가추천 학습시스템, 퀴즈백과 개발페이지 입니다">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="유플러스 아이들나라 개발메인">
+    <meta property="og:description" content="전문가추천 학습시스템, 퀴즈백과 개발페이지 입니다">
+    <meta property="og:url" content="../../iframe_demo.html">
+    <meta property="og:image" content="./img/favicon_16_lgu.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon_16_lgu.ico">
+
+    <!--lgu css-->
+    <link rel="stylesheet" type="text/css" href="../../addon/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../addon/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../addon/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jqueryui/1.12.1/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/daterangepicker/2.1.24/css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/timepicker/0.5.2/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jqueryui/1.12.1/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/1.10.12/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/1.10.12/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/fixedColumns/3.2.2/css/fixedColumns.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/select/1.2.0/css/select.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/buttons/1.2.2/css/buttons.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/buttons/1.2.2/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jstree/3.3.3/css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lgu/LGU_style_common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lgu/LGU_style_content.css" />
+
+    <!--new css-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>    
+<body class="ukids ">
+    
+    <div class="wrap_container">
+        <div class="cpnt_lnb">
+            <h1>LMS 어드민</h1>
+            <ul>
+                <li><a href="curriculum_form.html">커리큘럼 편성관리</a>
+                    <ul>
+                        <li><a href="curriculum_form.html">커리큘럼 편성</a></li>
+                        <li><a href="curriculum_setting.html">커리큘럼 설정</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="parents_info.html">부모알림장 관리</a>
+                    <ul>
+                        <li><a href="parents_info.html">학부모 유용정보</a></li>
+                        <li class="active"><a href="parents_banner.html">배너</a></li>
+                    </ul>
+                </li>
+                <li><a href="pet_setting.html">펫 관리</a>
+                    <ul>
+                        <li><a href="pet_setting.html">펫 설정</a></li>
+                        <li><a href="pet_list.html">펫 목록</a></li>
+                    </ul>
+                </li>
+                <li><a href="phrase_setting.html">문구 관리</a></li>
+            </ul>
+        </div>
+
+        <div class="cpnt_contents">
+            <div class="cpnt_title">
+                <h1>커리큘럼 편성</h1>
+            </div>
+            <article class="page-search">
+                <div>
+                    <div class="input-group pull-right">
+                        <label class="input-group-addon"><span>기질선택</span></label>
+                        <span class="input-group-form">
+                            <select class="form-control">
+                                <option>아이진단 미완료</option>
+                                <option>온순한 기질</option>
+                                <option>고집있는 기질</option>
+                                <option>변화무쌍한 기질</option>
+                                <option>섬세한 기질</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+            </article>
+            <ul class="cpnt nav nav-tabs">
+                <li class="active"><a href="#tab01" data-toggle="tab">아이진단 미완료</a></li>
+                <li><a href="#tab02" data-toggle="tab">부모진단 미완료</a></li>
+            </ul>
+            <!-- tab-content start -->
+            <div class="cpnt tab-content">
+                <div class="tab-pane fade active in" id="tab01">
+                    
+                    <table id="datatable1" class="display opacity0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>순서</th>
+                                <th class="required">추천유형명</th>
+                                <th>타입</th>
+                                <th>추천코드/편성표</th>
+                                <th>사용여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>1</td>
+                                <td>인트로1</td>
+                                <td>추천</td>
+                                <td>M011623130PPV00</td>
+                                <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>2</td>
+                                <td>커리큘럼 1</td>
+                                <td>추천</td>
+                                <td>Perfer_expert_001</td>
+                                <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td>
+                            </tr>
+                            <tr> <td></td> <td>3</td> <td>커리큘럼 2</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>4</td> <td>커리큘럼 3</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>5</td> <td>커리큘럼 4</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>6</td> <td>커리큘럼 5</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>7</td> <td>커리큘럼 6</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>8</td> <td>커리큘럼 7</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>9</td> <td>커리큘럼 8</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>10</td> <td>커리큘럼 9</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>11</td> <td>커리큘럼 10</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>12</td> <td>커리큘럼 11</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>13</td> <td>커리큘럼 12</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>14</td> <td>커리큘럼 13</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr> <tr> <td></td> <td>15</td> <td>커리큘럼 14</td> <td>추천</td> <td>Perfer_expert_001</td> <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td> </tr>
+                        </tbody>
+                    </table>
+                    <div class="cpnt btn-block">
+                        <ul class="list-inline pull-left">
+                            <li><button class="btn btn-default" type="button" data-toggle="modal" data-target="#modal-confirm-apply"><i class="fa fa-check" aria-hidden="true"></i><span>적용</span></button></li>
+                            <li><button class="btn btn-default" type="button" data-toggle="modal" data-target="#modal-confirm-del"><i class="fa fa-trash-o" aria-hidden="true"></i><span>삭제</span></button></li>
+                        </ul>
+                        <ul class="list-inline pull-right">
+                            <li>
+                                <!-- <button class="btn btn-primary"><i class="fa fa-plus"></i><span>등록</span></button> -->
+                                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus"></i><span>등록</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab02">
+                    <table id="datatable2" class="display opacity0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>순서</th>
+                                <th class="required">추천유형명</th>
+                                <th>타입</th>
+                                <th>추천코드/편성표</th>
+                                <th>사용여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>1</td>
+                                <td>커리큘럼2</td>
+                                <td>추천</td>
+                                <td>M011623130PPV00</td>
+                                <td><select class="form-control"><option>미사용</option><option selected>사용</option></select></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>2</td>
+                                <td>쉬는시간</td>
+                                <td>추천</td>
+                                <td>Perfer_expert_001</td>
+                                <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>3</td>
+                                <td>영어 학습</td>
+                                <td>추천</td>
+                                <td>Perfer_expert_001</td>
+                                <td><select class="form-control"><option selected>미사용</option><option>사용</option></select></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-block">
+                        <ul class="list-inline pull-left">
+                            <li><button class="btn btn-default"><i class="fa fa-check" aria-hidden="true"></i><span>적용</span></button></li>
+                            <li><button class="btn btn-default"><i class="fa fa-trash-o" aria-hidden="true"></i><span>삭제</span></button></li>
+                        </ul>
+                        <ul class="list-inline pull-right">
+                            <li>
+                                <!-- <button class="btn btn-primary"><i class="fa fa-plus"></i><span>등록</span></button> -->
+                                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus"></i><span>등록</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal custom start -->
+    <div class="cpnt modal fade" id="modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-default">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>close</span></button>
+                    <h1 class="modal-title">커리큘럼 등록</h1>
+                </div>
+                <div class="modal-body">
+                    <table class="table-detail">
+                        <caption>디테일 테이블(1단)</caption>
+                        <colgroup>
+                            <col width="25%" />
+                            <col width="75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="required"><span>추천유형명</span></th>
+                                <td><input type="text" class="form-control input-block" placeholder="필수 사항입니다." required></td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>타입</span></th>
+                                <td>
+                                    <div class="input-radio">
+                                        <label><input type="radio" class="form-control" name="rdo01" checked /><span>추천</span></label>
+                                        <label><input type="radio" class="form-control" name="rdo01" /><span>영어유치원</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>지면 데이타</span></th>
+                                <td><input type="text" class="form-control input-block" placeholder="필수 사항입니다." required></td>
+                            </tr>
+                            <tr>
+                                <th class="required"><span>오늘의 영어 레벨 카테고리 설정</span></th>
+                                <td>
+                                    <!-- process tab start -->
+                                    <div class="nav-processTabs">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><!--clsss: current disabled 사용가능-->
+                                                <button type="button" class="btn" data-toggle="tab" href="#step11"><span>STEP 1</span></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn" data-toggle="tab" href="#step12"><span>STEP 2</span></button>
+                                            </li>
+                                            <li class="">
+                                                <button type="button" class="btn" data-toggle="tab" href="#step13"><span>STEP 3</span></button>
+                                            </li>
+                                            <li class="">
+                                                <button type="button" class="btn" data-toggle="tab" href="#step14"><span>STEP 4</span></button>
+                                            </li>
+                                            <li class="">
+                                                <button type="button" class="btn" data-toggle="tab" href="#step15"><span>STEP 5</span></button>
+                                            </li>
+                                            <li class="">
+                                                <button type="button" class="btn" data-toggle="tab" href="#step16"><span>STEP 6</span></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div id="step11" class="tab-pane fade active in scrollH" style="height:370px;">
+                                            <table class="table-detail">
+                                                <caption>디테일 테이블(1단)</caption>
+                                                <colgroup>
+                                                    <col width="15%" />
+                                                    <col width="85%" />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><span>1차수</span></th>
+                                                        <td><input type="text" class="form-control input-block" /></td>
+                                                    </tr>
+                                                    <tr> <th><span>2차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>3차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>4차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>5차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>6차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>7차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>8차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>9차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>10차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>11차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>12차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>13차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>...</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                    <tr> <th><span>60차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="step12" class="tab-pane fade scrollH" style="height:370px;">
+                                            <table class="table-detail"> <caption>디테일 테이블(1단)</caption> <colgroup> <col width="15%" /> <col width="85%" /> </colgroup> <tbody> <tr> <th><span>1차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>2차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>3차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>4차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>5차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>6차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>7차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>8차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>9차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>10차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>11차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>12차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>13차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>...</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>60차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> </tbody> </table>
+                                        </div>
+                                        <div id="step13" class="tab-pane fade scrollH" style="height:370px;">
+                                            <table class="table-detail"> <caption>디테일 테이블(1단)</caption> <colgroup> <col width="15%" /> <col width="85%" /> </colgroup> <tbody> <tr> <th><span>1차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>2차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>3차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>4차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>5차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>6차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>7차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>8차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>9차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>10차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>11차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>12차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>13차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>...</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>60차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> </tbody> </table>
+                                        </div>
+                                        <div id="step14" class="tab-pane fade scrollH" style="height:370px;">
+                                            <table class="table-detail"> <caption>디테일 테이블(1단)</caption> <colgroup> <col width="15%" /> <col width="85%" /> </colgroup> <tbody> <tr> <th><span>1차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>2차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>3차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>4차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>5차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>6차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>7차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>8차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>9차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>10차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>11차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>12차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>13차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>...</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>60차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> </tbody> </table>
+                                        </div>
+                                        <div id="step15" class="tab-pane fade scrollH" style="height:370px;">
+                                            <table class="table-detail"> <caption>디테일 테이블(1단)</caption> <colgroup> <col width="15%" /> <col width="85%" /> </colgroup> <tbody> <tr> <th><span>1차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>2차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>3차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>4차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>5차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>6차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>7차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>8차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>9차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>10차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>11차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>12차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>13차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>...</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>60차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> </tbody> </table>
+                                        </div>
+                                        <div id="step16" class="tab-pane fade scrollH" style="height:370px;">
+                                            <table class="table-detail"> <caption>디테일 테이블(1단)</caption> <colgroup> <col width="15%" /> <col width="85%" /> </colgroup> <tbody> <tr> <th><span>1차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>2차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>3차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>4차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>5차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>6차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>7차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>8차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>9차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>10차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>11차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>12차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>13차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>...</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> <tr> <th><span>60차수</span></th> <td><input type="text" class="form-control input-block" /></td> </tr> </tbody> </table>
+                                        </div>
+                                    </div>
+                                    <!-- //process tab end -->
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-block">
+                        <ul class="list-inline pull-right">
+                            <li><button class="btn btn-default" data-dismiss="modal" aria-hidden="true"><span>취소</span></button></li>
+                            <li><button class="btn btn-primary" data-toggle="modal" data-target="#modal-confirm-register"><span>등록</span></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal custom end -->
+
+    <!-- modal alert01 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-register" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>등록하시겠습니까?</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true" onclick="$('.cpnt.modal').removeClass('in').hide();">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert01 end -->
+
+    <!-- modal alert02 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-apply" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>커리큘럼 스케쥴을 적용하겠습니까?<br>단, 이미 생성된 커리큘럼이 있는 프로필은 즉시 적용되지 않으며 다음날 커리큘럼 생성 시 적용 및 확인이 가능합니다.</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert02 end -->
+
+    <!-- modal alert03 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-del" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>삭제하시겠습니까?<br>삭제 후 복구가 불가능합니다.</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true" onclick="$('.cpnt.modal').removeClass('in').hide();">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert03 end -->
+
+    <script type="text/javascript" src="../../addon/jquery/3.1.1/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../../addon/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/jqueryui/1.12.1/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/colresize/1.0.7/js/ColReorderWithResize.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/fixedColumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/select/1.2.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+
+    <script type="text/javascript" src="../../js/lgu/LGU_js_common.js"></script>
+    <script type="text/babel">
+         $(document).ready(function() {
+
+             // datatables with checkbox
+            var table1 = $('#datatable1').DataTable({
+                dom: 'R<"dataTables_header"f<"dataTables_toolbar"ilB>>tp', // DOM layout order - (use colResize), filter, info, length, <"toolbar">, (use export Button), table, pagination
+                columnDefs: [{
+                        className: 'dt-checkbox',
+                        targets: 0,
+                        title: '<label><input type="checkbox" class="form-control" /><i class="fa fa-check-square"></i></label>',
+                        data: null,
+                        defaultContent: '<input type="checkbox" class="form-control" />',
+                        orderable: false
+                    }, // set checkbox
+                    {
+                        className: 'dt-center',
+                        targets: [1, 2, 3, 4, 5]
+                    }, // text left align default, set center align columns
+                    {
+                        className: 'dt-right',
+                        targets: 4
+                    } //  set right align columns
+                ],
+                order: [
+                    [1, 'asc']
+                ], // set default sort column
+                buttons: [{
+                    extend: 'colvis', // column toggle menu button
+                    text: '<i class="fa fa-cog"></i>',
+                    postfixButtons: [{
+                        extend: 'colvisRestore',
+                        text: '초기화'
+                    }]
+                }],
+                language: { // customize texts and markup
+                    search: '<i class="fa fa-search"></i>_INPUT_',
+                    info: 'Total: <em>_TOTAL_</em>',
+                    zeroRecords: '찾을 수 없습니다',
+                    lengthMenu: '_MENU_<span>/ page</span>',
+                    infoEmpty: '찾을 수 없습니다',
+                    infoFiltered: "(filtered from _MAX_ total records)",
+                    paginate: {
+                        first: '<i class="fa fa-angle-double-left"></i>',
+                        previous: '<i class="fa fa-angle-left"></i>',
+                        next: '<i class="fa fa-angle-right"></i>',
+                        last: '<i class="fa fa-angle-double-right"></i>',
+                    }
+                },
+                lengthMenu: [
+                    [-1, 10, 30, 50, 100],
+                    ["All", 10, 30, 50, 100]
+                ], // page length option
+                iDisplayLength: 10, // default page length
+                initComplete: function( settings, json ) {
+                    $('table').removeClass('opacity0');
+                },
+                pagingType: 'full_numbers' // add pagination first, last button
+            });
+
+            // module buttons
+            /*new $.fn.dataTable.Buttons(table1, {
+                buttons: [{
+                    className: 'btn-module',
+                    text: '<i class="fa fa-plus"></i><span>추가</span>', // 'add row' favicon
+                    action: function(e, dt, node, conf) { // 'add row' button action
+                        alert('행 추가');
+                    }
+                }, {
+                    className: 'btn-module',
+                    text: '<i class="fa fa-minus"></i><span>삭제</span>', // 'delete row' favicon
+                    action: function(e, dt, node, conf) { // 'delete row' button action
+                        alert('행 삭제');
+                    }
+                }, {
+                    className: 'btn-module',
+                    extend: 'excel', // export button
+                    text: '<i class="fa fa-file-excel-o"></i><span>다운로드</span>' // 'excel' favicon
+                }]
+            });
+            table1.buttons(1, null).container().appendTo($(table1.table().container()).find('div.dataTables_header')).addClass('module-buttons');*/
+
+            // hide paging when not necessary
+            // $(table1.table().container()).find('div.dataTables_paginate').css('display', table1.page.info().pages <= 1 ? 'none' : 'block');
+            // table1.on('length.dt', function(e, settings, len) {
+            //     $(table1.table().container()).find('div.dataTables_paginate').css('display', table1.page.info().pages <= 1 ? 'none' : 'block');
+            // });
+
+            // customize sort arrow
+            table1.columns().iterator('column', function(ctx, idx) {
+                $(table1.column(idx).header()).append('<span class="sort-icon"/>');
+            });
+
+            // th asterisk
+            table1.columns().iterator('column', function(ctx, idx) {
+                if ($(table1.column(idx).header()).hasClass('required')) {
+                    $(table1.column(idx).header()).prepend('<span class="asterisk"/>')
+                };
+            });
+            
+            //버튼 위치 변경
+            table1.table().node().after($(table1.table().node()).parents(".dataTables_wrapper").next().clone()[0]);
+            $(table1.table().node()).parents(".dataTables_wrapper").next().remove();
+            
+
+            var table2 = $('#datatable2').DataTable({
+                dom: 'R<"dataTables_header"f<"dataTables_toolbar"ilB>>tp', // DOM layout order - (use colResize), filter, info, length, <"toolbar">, (use export Button), table, pagination
+                columnDefs: [{
+                        className: 'dt-checkbox',
+                        targets: 0,
+                        title: '<label><input type="checkbox" class="form-control" /><i class="fa fa-check-square"></i></label>',
+                        data: null,
+                        defaultContent: '<input type="checkbox" class="form-control" />',
+                        orderable: false
+                    }, // set checkbox
+                    {
+                        className: 'dt-center',
+                        targets: [1, 2, 3, 4, 5]
+                    }, // text left align default, set center align columns
+                    {
+                        className: 'dt-right',
+                        targets: 4
+                    } //  set right align columns
+                ],
+                order: [
+                    [1, 'asc']
+                ], // set default sort column
+                buttons: [{
+                    extend: 'colvis', // column toggle menu button
+                    text: '<i class="fa fa-cog"></i>',
+                    postfixButtons: [{
+                        extend: 'colvisRestore',
+                        text: '초기화'
+                    }]
+                }],
+                language: { // customize texts and markup
+                    search: '<i class="fa fa-search"></i>_INPUT_',
+                    info: 'Total: <em>_TOTAL_</em>',
+                    zeroRecords: '찾을 수 없습니다',
+                    lengthMenu: '_MENU_<span>/ page</span>',
+                    infoEmpty: '찾을 수 없습니다',
+                    infoFiltered: "(filtered from _MAX_ total records)",
+                    paginate: {
+                        first: '<i class="fa fa-angle-double-left"></i>',
+                        previous: '<i class="fa fa-angle-left"></i>',
+                        next: '<i class="fa fa-angle-right"></i>',
+                        last: '<i class="fa fa-angle-double-right"></i>',
+                    }
+                },
+                lengthMenu: [
+                    [-1, 10, 30, 50, 100],
+                    ["All", 10, 30, 50, 100]
+                ], // page length option
+                iDisplayLength: 10, // default page length
+                initComplete: function( settings, json ) {
+                    $('table').removeClass('opacity0');
+                },
+                pagingType: 'full_numbers' // add pagination first, last button
+            });
+
+            // customize sort arrow
+            table2.columns().iterator('column', function(ctx, idx) {
+                $(table2.column(idx).header()).append('<span class="sort-icon"/>');
+            });
+
+            // th asterisk
+            table2.columns().iterator('column', function(ctx, idx) {
+                if ($(table2.column(idx).header()).hasClass('required')) {
+                    $(table2.column(idx).header()).prepend('<span class="asterisk"/>')
+                };
+            });
+
+            //버튼 위치 변경
+            table2.table().node().after($(table2.table().node()).parents(".dataTables_wrapper").next().clone()[0]);
+            $(table2.table().node()).parents(".dataTables_wrapper").next().remove();
+
+            // checkbox select
+            $('.dt-checkbox input:checkbox').on('click', function() {
+                if ($(this).prop('checked')) {
+                    $(this).parents('tr').addClass('selected');
+                } else {
+                    $(this).parents('tr').removeClass('selected');
+                };
+            });
+
+            // checkbox toggle all
+            $('th.dt-checkbox input:checkbox').change(function() {
+                console.log("aaa");
+                $(this).prop('checked') ? $(this).parents('thead').next('tbody').find('tr').addClass('selected') : $(this).parents('thead').next('tbody').find('tr').removeClass('selected');
+                $("input:checkbox").prop('checked', $(this).prop("checked"));
+            });
+
+         });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1138 @@
+@charset "UTF-8";
+/**
+ * Description: LGU+ SWG Style.
+ * Version: 1.0.0
+ * Last update: YYYY/MM/DD
+ * Author: 
+ */
+
+/* ==========================================================================
+   guide_LNB
+   ========================================================================== */ 
+#legacy header {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    z-index: 1;
+}
+#lnb-header {
+    padding: 0 20px;
+}
+#lnb-header h1 {
+    width: 100%;
+    height:50px;
+    font-size: 23px;
+    color: #222;
+    font-weight: 700;
+    background: none;
+    text-indent: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 7px;
+}
+#lnb-header h1 a {
+    color: #222;
+}
+#lnb-list {
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    padding: 0 20px;
+}
+
+/* accordion menu */
+.lnb-folded .accordion-nav { 
+    display: none; 
+}
+.accordion-nav {
+    overflow-x: h;
+    overflow-y: auto;
+    padding: 0;
+}
+.accordion-nav .depth01 li { 
+    position: relative; 
+}
+.accordion-nav .depth01 li a {
+    display: block;
+    line-height: 40px;
+    position: relative;
+    background-size: 550px 100%;
+    background-repeat: no-repeat;
+    transition: background 0.1s ease-in;
+    border-radius: 3px;
+}
+.accordion-nav .depth01 li a:hover {
+    text-decoration: none;
+    background: #ddd;
+}
+.accordion-nav .depth01 li a span {
+    font-size: 1.3rem;
+    color: #555;
+}
+.accordion-nav .depth01 li a span em {
+    font-size: 11px; 
+    margin-left: 5px; 
+    color: #888;
+}
+.accordion-nav .depth01 li a .badge {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 3px 5px 4px;
+    color: #f26521;
+    font-size: 1.1rem;
+    background: #fff;
+    border-radius: 25px;
+    min-width: 20px;
+}
+.accordion-nav .depth01 li.current a {
+    border-top-color: transparent;
+    background: #ec017e;
+}
+.accordion-nav .depth01 li.current a .badge {
+    background: #fff;
+    color: #f26521;
+}
+.accordion-nav .depth01 ul {
+    display: none;
+    padding-bottom: 8px;
+}
+.accordion-nav .depth01 > li > a {
+    border-top: 1px solid #ddd;
+}
+.accordion-nav .depth01:first-child > li:first-child a {
+    border-top-color: transparent;
+}
+.accordion-nav .depth01 > li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+.accordion-nav .depth01 > li > a span {
+    display: block;
+    padding: 0 20px 0 5px;
+    color: #222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    font-family: "LGSmHaR";
+}
+.accordion-nav .depth01 > li.current > a span {
+    color:#fff;
+}
+.accordion-nav .depth01 > li.current:last-child {
+    border:none;
+}
+.accordion-nav .depth01 > li.current + li > a {
+    border-top-color: transparent;
+}
+.accordion-nav .depth02 > li a {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 0 0 20px;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ddd;
+}
+.accordion-nav .depth02 > li a span {
+    font-weight: 600; 
+    color:#555;
+}
+.accordion-nav .depth02 > li a:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 44%;
+    left: 10px;
+    width: 3px;
+    height: 3px;
+    background: #888;
+}
+.accordion-nav .depth02 > li a:hover span {
+    color: #222;
+}
+.accordion-nav .depth02 li > a:hover:before {
+    background: #222;
+}
+.accordion-nav .depth02 li > a:hover {
+    padding-right: 20px;
+}
+.accordion-nav .depth02 li.current > a:before {
+    background: #fff !important;
+}
+.accordion-nav .depth02 li.current > a span { 
+    color: #ffffff; 
+}
+.accordion-nav .depth03 { 
+    display: none;
+}
+.accordion-nav .depth03 > li > a {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 0 0 16px;
+    margin: 0 0 0 9px;
+}
+.accordion-nav .depth03 > li > a > span {
+    font-size: 12px; font-weight: 400;
+}
+.accordion-nav .depth03 > li > a:before {
+    top: 14px;
+    left: 5px;
+    width: 5px;
+    height: 1px;
+    background: #888;
+}
+.accordion-nav .depth01 li a:after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    color: #555;
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 20px;
+    opacity:0;
+    line-height: 10px;
+    transform:rotate(-90deg);
+    transition: 0.5s transform;
+}
+.accordion-nav .depth01 li:hover > a:after {
+    opacity: 1; 
+    right: 5px; 
+    transition: 0.5s all;
+}
+.accordion-nav .depth01 .hasChild > a:after {
+    opacity: 1;
+    right: 7px;
+    transform:rotate(0deg);
+}
+.accordion-nav .depth01 .hasChild.on > a:after {
+    opacity: 0.5;
+    right: 7px;
+    transform: rotate(180deg);
+    transition: 0.5s transform;
+}
+.accordion-nav .depth01 li.current a:after {
+    transform: rotate(-90deg);
+    right: 7px;
+    color:#fff;
+    opacity: 1;
+}
+.accordion-nav .depth01 label span {
+    display: inline-block !important;
+}
+.accordion-nav .depth01 li div.division {
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    height: 1px;
+    border-top:1px dashed #aaa;
+    top: -4px;
+}
+.accordion-nav .navBtn {
+  padding: 11px 0 10px;
+  display: block;
+  background:#fff;
+  color: #888;
+  font-size: 13px;
+  text-align: center;
+  }
+.accordion-nav .navBtn:hover {
+    text-decoration: none; 
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+.accordion-nav .navBtn_Group {
+    padding: 10px;
+    background: #f6f6f6;
+}
+.accordion-nav .navBtn.highlight {
+    background: #003d65;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+.accordion-nav .navBtn.highlight * {
+    vertical-align: middle;
+}
+.accordion-nav .navBtn.highlight:hover {
+    background: #095e96;
+}
+.accordion-nav i.code {
+    background: #888;
+    color: #fff;
+    font-size: 11px;
+    display: inline-block;
+    padding: 3px 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   intro
+   ========================================================================== */ 
+   .introimg {
+    background: #f8f8f8; 
+    border: 1px solid #eee; 
+    margin-bottom: 30px; 
+    text-align: center; 
+    width: 850px; 
+    margin-top: 20px;
+}
+.subarea {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 350px;
+    border-left: 1px solid #ddd;
+    padding-left: 30px;
+    min-height: 800px; 
+    background: #fff;
+}
+button.download {
+    height: auto;
+    padding: 15px 30px;
+    margin-top: 10px;
+}
+button.download span {
+    color:#fff; 
+    text-decoration: none; 
+    font-size: 18px;
+}
+/* ==========================================================================
+   
+   ========================================================================== */ 
+.content-list.guide {
+    background: #fdebed;
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+.content-list>li {
+    position: relative;
+    padding-left: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.content-list>li:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 9px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: #bcbcbc;
+}
+.content-list.guide li {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 12px;
+    margin: 2px 0;
+    color: #202020;
+}
+
+.content-list.guide li * {
+    color: #202020;
+}
+.content-list.guide li span {
+    opacity: 0.7; 
+    font-weight: 300;
+}
+.content-list.guide li a {
+    text-decoration: underline;
+}
+.content-list.guide li:before {
+    background: #a8a8a8;
+    display: inline-block;
+    top: 8px;
+}
+.content-list.guide li em {
+    text-decoration: underline;
+}
+.page-header h2 ~ a.download {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #202020;
+    background: #293846;
+    color: #fff;
+    border-radius: 5px;
+    margin: 8px 0;
+    float: right;
+    display:none;
+}
+.page-header h2 ~ a.manual {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #202020;
+    background: #fff;
+    color: #202020;
+    border-radius: 5px;
+    margin: 8px 5px;
+    float: right;
+}
+.page-header h2 ~ a.help {
+    display: none;
+}
+.page-header h2 + a.download i {
+    margin-right: 15px;
+}
+.page-header h2 ~ .tools {
+    background: #eee; 
+    display: inline-block;
+    margin: 0; 
+    margin: 8px 0; 
+    padding: 6px 10px; 
+    border-radius: 5px; 
+    float: right; 
+    margin-right: 5px;
+}
+.page-header h2 ~ .tools > * {
+    display: inline-block; 
+    vertical-align: middle;
+}
+.page-header h2 ~ .tools dt {
+    background: #fff; 
+    border-radius: 3px; 
+    padding: 0 5px; 
+    margin-right: 3px; 
+    font-size: 11px; 
+    font-weight: 400; 
+    color: #888;
+}
+
+.page-header h2 ~ .tools dd a {
+    color: #ec017e;
+}  
+.page-header h2 ~ .tools dd a:hover {
+    text-decoration: underline;
+}
+.page-header h2 ~ .tools dd.name a em {
+    font-weight: 700;
+}
+.page-header h2 ~ .tools dd.phone .sms {
+    margin: 0 5px; 
+    color: #888; 
+    text-decoration: underline; 
+    font-size: 11px; 
+    vertical-align: middle;
+}
+.page-header h2 ~ .tools dd.phone .sms:hover {
+    color: #000;
+}
+.wsample {
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    color: #eee;
+    padding-top: 20px !important;
+}
+.wsample i {
+    font-size: 26px; 
+    color: #eee;
+}
+/* ==========================================================================
+   UX guide  
+   ========================================================================== */ 
+.uxguide #accordion .panel-title a {
+    width: 100%;
+    display: block;
+    font-family: "LGSmHaR";
+    font-weight: 100;
+    position: relative;
+}
+.uxguide #accordion .panel-title span {
+    right: 10px;
+    text-align: right;
+    display: inline-block;
+    color: #ec017e;
+    min-width: 120px;
+    font-family: "LGSmHaR";
+    position: absolute;
+}
+.uxguide #accordion .panel-body ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.uxguide #accordion .panel-body ul li:hover {
+    color: #ec017e;
+}
+.uxguide #accordion .panel-body li em {
+    display: inline-block;
+    background: #7b558d;
+    color: #fff;
+    min-width: 80px;
+    height: 21px;
+    border-radius: 100px;
+    text-align: center;
+    margin-right: 10px;
+}
+.uxguidecase div.modal-body {
+    padding: 40px;
+}
+.uxguidecase div.modal-body .header {
+    font-size: 20px;
+    font-family: "LGSmHaR";
+    margin-bottom: 30px;
+}
+.uxguidecase div.image {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.uxguidecase div.image img {
+    width: 100%;
+}
+.uxguidecase dl dt {
+    font-size: 22px;
+    color: #ff0000;
+    padding: 14px 0 10px;
+    font-family: "LGSmHaR";
+}
+.uxguidecase dl.good dt {
+    color: #00d472;
+}
+.uxguide ul.colorGuide {
+    position: relative; 
+    top: -10px;
+}
+.uxguide ul.colorGuide li {
+    padding: 30px 20px;
+    display: inline-block;
+    border-radius: 35px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    width: 85px;
+}
+.uxguide ul.colorGuide li:before {
+    display: none;
+}
+.uxguide ul.colorGuide li span {
+    position: relative; 
+    top: 55px; 
+    font-size: 12px;
+}
+/* ==========================================================================
+   layout-guide
+   ========================================================================== */ 
+.lsample div {
+    color: #fff; 
+    text-align: center; 
+    padding: 20px;
+}
+.lheader {
+    background: #ef5086;
+}
+.lsample div.lbody {
+    display: table; 
+    width: 100%; 
+    background: #eee;
+}
+.lsample div.lbody div {
+    display: table-cell;
+    padding: 200px 20px;
+}
+.lsample div.lbody div b {
+    font-size: 22px;
+}
+.llnb {
+    background: #9a8b86;
+    width: 150px;
+}
+.lcontent {
+    background: #c1afa5;
+}
+.lvpa {
+    background: #7b558d;
+    width: 200px;
+}
+.lgrid {
+    margin: 30px 0;
+}
+.lgrid div[class*='col'] {
+    margin-bottom: 20px;
+}
+.lgrid div[class*='col'] > div {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 5px;
+    min-height: 80px;
+}
+.lgrid div[class*='col'] > div.highlight {
+    background: #ec017e; 
+    color: #fff;
+}
+.lgrid div[class*='col'] > div.em {
+    background: #555; 
+    color:#fff;
+}
+.lgrid div[class*='col'] > div.em > ul {
+    opacity: 0.2;
+}
+.lgrid_body div[class*='col'] > div {
+    height: 400px;
+    background: #fff;
+}
+.lgrid_body div[class*='col'] > div.left {
+    height: 500px;
+}
+.lgrid_body div[class*='col'] > div.rt {
+    height: 50px;
+    min-height: 50px;
+    padding: 15px 30px;
+    color: #000;
+}
+.lgrid_body div[class*='col'] > div.rt i.fa {
+    color: #555;
+}
+.lgrid_body div[class*='col'] > div.rb {
+    height: 430px;
+}
+.lgrid ul.toparea {
+    float: left;
+}
+.lgrid ul.toparea li,
+.lgrid ul.topareautil li {
+    display: inline-block; 
+    padding: 0 15px; 
+    cursor: pointer;
+}
+.lgrid ul.topareautil li i.fa {
+    color: #fff;
+}
+.lgrid ul.toparea li:hover,
+.lgrid ul.topareautil li:hover {
+    text-decoration: underline;
+}
+.lgrid ul.topareautil {
+    float: right;
+}
+.lgrid ul.toparea li:first-child {
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 4px 50px;
+    margin-top: -5px;
+    margin-right: 30px;
+}
+.lgrid ul.leftarea > li:first-child {
+    font-weight: 600;
+    font-size: 16px; 
+    border-bottom: 2px solid #fff; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+.lgrid ul.leftarea li {
+    cursor: pointer; 
+    margin-bottom: 3px;
+}
+.lgrid ul.leftarea li:hover {
+    text-decoration: underline;
+}
+.lgrid ul.leftarea li > ul {
+    margin: 10px 5px 10px 10px; 
+    font-size: 12px;
+}
+.lgrid ul.leftarea li > ul li:before {
+    content: ""; 
+    font-family: "FontAwesome"; 
+    border: 1px solid #fff; 
+    border-width: 0 0 1px 1px; 
+    width: 8px; 
+    height: 8px; 
+    display: inline-block; 
+    opacity: 0.5; 
+    margin-right: 5px;
+}
+.lgrid_support .highlight ul li {
+    padding: 10px 20px;
+    text-align: center;
+    background: #cc1577;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: left; 
+    white-space: nowrap; 
+    overflow: hidden;
+}
+.lgrid_support .highlight ul li i.fa {
+    margin-right: 10px;
+}
+.lgrid_support.fold .col-sm-7 {
+    width: calc(83.33333333% - 100px);
+}
+.lgrid_support.fold .col-sm-3 {
+    width: 100px;
+}
+.lgrid_support.fold .highlight {
+    padding: 10px;
+}
+.lgrid_support.fold .highlight ul li {
+    width: 50px;
+}
+.lgrid_support.fold .highlight ul li i.fa {
+    margin-right: 20px;
+}
+.lgrid_support .highlight button {
+    position: absolute;
+    top: -75px;
+    right: 40px;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%; 
+    transition: transform 0.3s;
+}
+.lgrid_support.fold .highlight button {
+    transform: rotate(180deg);
+}
+.nav-tabs.mdi-tabs {
+    border-bottom: 2px solid #cc1577; 
+    background: #777;
+}
+.mdi-tabs > li{
+    margin-bottom: 0px;
+}
+.mdi-tabs > li > a {
+    margin-right: -1px;
+    border-radius: 0;
+    background: #555;
+    color: #fff;
+    border: 1px solid transparent;
+    font-family: "LGSmHaR";
+    font-size: 1.3rem;
+    font-weight: normal !important;
+}
+.mdi-tabs > li > a:focus,
+.mdi-tabs > li > a:hover { 
+    background: #333;
+    color: #fff;
+    border: 1px solid transparent !important;
+}
+.mdi-tabs > li.active > a,
+.mdi-tabs > li.active > a:focus,
+.mdi-tabs > li.active > a:hover {
+    color: #fff;
+    background: #cc1577;
+    border: 1px solid transparent; 
+}
+.mdi-tabs > li:not(.active) + li:not(.active) a {
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.mdi-tabs > li > a i.ci-close {
+    fill: #fff;
+    padding: 3px 6px; 
+    margin-left: 5px; 
+    vertical-align: middle;
+    cursor: pointer;
+}
+.mdi-tabs > li > a i.ci-close svg {
+    width: 10px; 
+    height: 10px; 
+    opacity: 0.7; 
+}
+.mdi-tabs > li > a i.ci-close:hover {
+    background: rgba(255,255,255,0.3); 
+    border-radius: 100%;
+}
+.mdi-tabs > li > a i.ci-close:hover svg {
+    opacity: 1;
+}
+.mdi-util {
+    position: absolute; 
+    right: 30px; 
+    top:0; 
+    display: flex; 
+    align-items: center; 
+}
+.mdi-util i {
+    padding: 12px;
+    vertical-align: middle;
+    fill: #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+}
+.mdi-util i svg {
+    margin-right: 5px;
+}
+
+/* ==========================================================================
+   Layout Guide
+   ========================================================================== */ 
+.layoutGuide th {
+    text-align: center;
+    padding: 30px 10px;
+}
+.layoutGuide td {
+    padding: 20px 25px;
+}
+.layoutGuide td:last-child {
+    text-align: center; 
+    border-left: 0;
+}
+.layoutGuide td label {
+    font-family: "LGSmHaR";
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+.layoutGuide td .tag {
+    margin-top: 10px;
+}
+.layoutGuide td .tag:before {
+    display: none;
+}
+.layoutGuide td .tag span {
+    background: #f1f1f1; 
+    display: inline-block; 
+    padding: 0 6px 2px; 
+    border-radius: 5px; 
+    font-size: 12px;
+}
+
+/* ==========================================================================
+   화면배치 기본규칙(사용여부?)
+   ========================================================================== */ 
+.principle {
+    padding: 0 250px 0 0;
+    transform: scale(0.83);
+    transform-origin: center 100px;
+}
+.principle table {
+    border-top: 1px solid #aaa;
+}
+.principle > * {
+    background: #f1f1f1;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
+    padding: 20px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #f92465;
+    margin-bottom: 15px !important;
+    position: relative;
+}
+.principle > header {
+    padding: 0 20px;
+}
+.principle > .page-search {
+    padding: 10px;
+}
+.principle > .page-search > div {
+    background: none; 
+    box-shadow: none;
+}
+.principle div.dataTables_wrapper div.dt-buttons a.buttons-colvis {
+    display: none;
+}
+.principle div.title {
+    position: absolute;
+    right: -250px;
+    top: 0;
+    bottom: 0;
+    font-size: 18px;
+    color: #f92465;
+    text-align: left;
+    width: 200px;
+    border-top: 1px dashed #f92465;
+    border-bottom: 1px dashed #f92465;
+    display: flex;
+    align-items: center;
+}
+.arrow_box {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(249,36,101,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 700px;
+    width: 100px;
+    position: absolute;
+    left: calc(41.5% - 60px);
+    margin-top: 19px;
+    opacity: 0.3;
+    z-index: 1;
+}
+.arrow_box:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #f92465;
+    border-width: 100px;
+    margin-left: -100px;
+}
+
+/* ==========================================================================
+   Library
+   ========================================================================== */ 
+.library i {
+    color: #fff; 
+    border-radius: 5px; 
+    display: inline-block; 
+    padding: 0 5px; 
+    line-height: 1.3em; 
+    margin-right: 5px;
+}
+.library i.js {
+    background: #ec017e;
+}
+.library i.css {
+    background: #8850b2;
+}
+.library i.font {
+    background: #357893;
+}
+
+/* ==========================================================================
+   UI Pattern
+   ========================================================================== */ 
+table.uipattern td img {
+    max-height: 150px; 
+    margin: 10px;
+}
+div.uipattern {
+    margin-top: 30px;
+}
+div.uipattern h2 {
+    color: #7b558d;
+    font-family: "LGSmHaR";
+    font-size: 24px;
+    padding: 21px 20px 21px;
+    clear: both;
+}
+div.uipattern ul.row {
+    padding: 20px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    background: #fff;
+    margin: 0 0 30px;
+}
+div.uipattern ul.row > li {
+    position: relative;
+}
+div.uipattern ul.row > li h3 {
+    font-size: 18px;
+    color: #f92465;
+    font-family: "LGSmHaR";
+}
+div.uipattern ul.row > li h3 em {
+    font-size: 14px; 
+    background: #f92465; 
+    color:#fff; 
+    border-radius: 7px; 
+    padding: 0 6px;
+}
+div.uipattern ul.row > li li,
+div.uipattern ul.row > li span {
+    font-size: 12px;
+    display: block;
+    position: relative;
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+div.uipattern ul.row > li li:before,
+div.uipattern ul.row > li span:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 7px;
+    left: 0;
+    border-radius: 50%;
+    background-color: #bcbcbc;
+}
+div.uipattern img {
+    margin: 30px auto;
+    max-height: 160px;
+    max-width: 100%;
+    display: table;
+}
+div.uipattern ul.row > li * {
+    transition: 0.2s;
+}
+div.uipattern ul.row > li:hover img {
+    opacity: 0.2;
+}
+div.uipattern ul.row > li a.btn {
+    position: absolute;
+    top: 110px;
+    left: calc(50% - 90px);
+    opacity: 0;
+}
+div.uipattern ul.row > li:hover a.btn { 
+    opacity: 1;
+}
+
+/* ==========================================================================
+   PT #lnb-header
+   ========================================================================== */ 
+.PT header {
+    padding-top: 50px;
+}
+.PT #lnb-header {
+    position: fixed;
+    top:0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.PT #lnb-header h1 {
+    padding: 0 25px;
+    line-height: 50px;
+    font-family: 'LGSmHaR';
+    font-size: 1.5em;
+    font-weight: normal;
+    width: 260px;
+    border-bottom: none;
+}
+.PT #lnb-header h1 b {
+    color: #ec017e; 
+    font-weight: bold;
+}
+.PT #lnb-header h1 + ul {
+    display: flex; 
+    position: absolute; 
+    top: 0; 
+    left: 290px; 
+}
+.PT #lnb-header h1 + ul li a {
+    font-family: 'LGSmHaR';
+    font-size: 1.3em;
+    margin-right: 28px;
+    color: #555;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+.PT #lnb-header h1 + ul li a.current,
+.PT #lnb-header h1 + ul li a:hover {
+    color: #ec017e; 
+    border-top: 2px solid #ec017e; 
+}
+.PT #lnb-list {
+    height: 100%; 
+    padding-top: 5px;
+}
+.PT #lnb-list h2 {
+    font-family: 'LGSmHaR';
+    font-size: 1.5em;
+    padding: 11px 3px;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+.PT #legacy-content {
+    height: calc(100% - 50px);
+    position: relative;
+    top: 50px;
+}
+/* ==========================================================================
+   Intro
+   ========================================================================== */ 
+.logo-inline {
+    display: inline-block;
+    width: 18px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+.download-pack {
+    padding-top: 45px;
+    max-width: 800px;
+}
+.download-pack .downpack-button {
+    padding: 10px 20px;
+    background: #7b558d;
+    border: 2px solid #7b558d;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
+.download-pack .downpack-button span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-indent: 0;
+}
+.download-pack .downpack-button i.arrow-down {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 15px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+    margin-right: 5px;
+}
+.download-pack .downpack-button i.arrow-down:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 4px solid #fff;
+}
+.download-pack .downpack-button i.arrow-down:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    display: block;
+    width: 2px;
+    height: 7px;
+    background: #fff;
+}
+.download-pack .downpack-button:hover {
+    background: #fff;
+}
+.download-pack .downpack-button:hover span {
+    color: #7b558d;
+}
+.download-pack .downpack-button:hover i.arrow-down {
+    border-bottom-color: #7b558d;
+}
+.download-pack .downpack-button:hover i.arrow-down:before {
+    border-top-color: #7b558d;
+}
+.download-pack .downpack-button:hover i.arrow-down:after {
+    background: #7b558d;
+}
+
+/* ==========================================================================
+   Check list
+   ========================================================================== */ 
+.table-check .table-detail thead th {
+    text-align: center;
+    border-left: 1px solid #e2e2e2;
+}
+.table-check .table-detail thead th:first-child {
+    border-left: none;
+}
+.table-check .table-detail th,
+.table-check .table-detail td {
+    text-align: center;
+}
+.table-check .input-radio {
+    width: 345px;
+    margin: 0 auto;
+}
+.table-check .input-radio label:last-child {
+    margin-right: 0;
+}
+.table-check dl {
+    margin-bottom: 0;
+}

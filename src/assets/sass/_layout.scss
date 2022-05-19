@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/**
+ conponents collection
+ 
+ */
+ 
+
+/**
+ frame_demo
+*/
+.wrap {  }
+.wrap .header { }
+.wrap .container {  }
+.wrap .footer { text-align:center; position:absolute; height:0; line-height:0; overflow:hidden; }
+
+.header .hgroup { display:flex; flex-flow:row nowrap; align-items:center; width:1650px; height:65px; margin:0 auto; }
+.header .hgroup h1 {  }
+.header .hgroup .utile { margin-left:auto; }
+.header .hgroup .utile a {}
+.header .hgroup .utile a { position:relative; padding:0 10px; }
+.header .hgroup .utile a.member { color:#7ebbfc; }
+.header .hgroup .utile a:nth-child(-1n+2)::before { display:none; }
+.header .hgroup .utile a::before { content:"|"; position:absolute; left:-3px; top:2px; font-size:.7rem; }
+.header .nav { width:100%; height:35px; background-color:#c6266a; line-height:35px; }
+.header .nav > ul { display:flex; max-width:1600px; margin:0 auto; color:#fff; }
+.header .nav > ul > li { flex:1; position:relative; text-align:center; }
+.header .nav > ul > li:hover { background-color:#fd7dc0; }
+.header .nav > ul > li ul { display:none; position:absolute; left:0; top:35px; width:100%; background-color:#fd7dc0; }
+.header .nav > ul > li ul li { border-top:1px solid #fff; }
+.header .nav > ul > li:hover ul { display:block; }
+.header .nav > ul > li ul li:hover { background-color:#ff6ab7; }
+
+/**
+ app frame layout
+*/
+.layout_container { display:flex; flex-flow:wrap row; width:1650px; height:calc(100vh - 100px); padding-top:43px; margin:0 auto; 
+    &:after { content:""; display:block; width:100%; height:0; padding:0; margin:0; background:none; border:0 solid transparent; overflow:hidden; }
+    .layout_sidebar { flex:none; width:300px; /*float:left;*/ padding:0 50px; }
+    .layout_contents { flex:1; width:1350px; /*float:left; margin-left:50px;*/ margin-right:0px; }
+}
+
+/**
+ layout style
+*/
+.layout_wrap { display:flex; align-items:stretch; flex-flow:nowrap row;
+    .layout_item { flex:1; 
+        &.isBd { border:1px solid $c-bd-line; }
+    }
+}
+
+ 
+
+/*
+//cpnt : lug css 재정의
+.wrap_container {  }
+#wrap_container { height:calc(100vh - 100px); overflow-y:auto; overscroll-behavior:auto; }
+
+.cpnt.panel { margin-top:0px; }
+.cpnt.nav {  }
+.cpnt.nav-tabs {  }
+.cpnt.tab-content { padding-top:30px; }
+.cpnt.modal::before { display:block; position:fixed; left:0; top:0; width:100%; height:100%; background-color:rgba(255,255,255,.8); }
+.cpnt.modal .modal-dialog { box-shadow:5px 5px 20px rgba(0,0,0,.3); }
+.cpnt.modal .modal-dialog.modal-full { overflow-y:auto; width:calc(100% - 40px); height:calc(100vh - 140px); min-height:500px; margin:20px; }
+.modal-backdrop { display:none !important; background-color:#fff !important; }
+
+.pagination { border-bottom:0 solid #fff; }
+.nav-processTabs .nav:before { z-index:0; }
+.cpnt.modal.alert .modal-dialog { position:fixed !important; top:50% !important; left:50% !important; transform:translate(-50%, -50%) !important; }
+.cpnt.modal.alert .modal-body { padding-left:20px; padding-right:20px; }
+.cpnt.table-content {  }
+.cpnt.modal { display:none; }
+.opacity0 { opacity:100% !important; }
+
+
+.lo_frame { height:100%; }
+.lo_frame body { overflow:auto !important; }
+// .lo_frame .cpnt.modal { height:100%; }
+
+//.float-left { float:left !important; }
+//.float-right { float:right !important; }
+.clear-both::after { content:""; display:block; overflow:hidden; height:0; padding:0; margin:0; background-color:transparent; border-width:0; font-size:0; }
+.scrollH { overflow-y:auto; }
+
+//form
+input[type="url"].form-control { display:inline-block; width:auto; min-width:100px; height:26px; padding:4px 6px; border-color:#a8a8a8; border-radius:3px; box-shadow:none; font-size:1.2rem; color:#202020; }
+td input[type="url"].form-control { min-width:auto; }
+th.required + td > input[type="url"].form-control, td.required > input[type="url"].form-control, td.required + td input[type="url"].form-control, td .required input[type="url"].form-control { background-color:#fff5f5; }
+input[type="url"]:focus.form-control { border-color:#333333; background:#fff !important; box-shadow:none; }
+
+input[type="file"].form-control { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; border:0px solid transparent !important; line-height:0 !important; font-size:0 !important; white-space:nowrap !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; clip-path:inset(50%) !important; }
+input[type="file"].form-control + input[type="text"] { width:60%; }
+input[type="file"].form-control + input[type="text"] + button {  }
+*/
