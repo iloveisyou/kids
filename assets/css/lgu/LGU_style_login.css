@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* Login
+---------------------------------------------------------*/
+html, body {
+	overflow: hidden;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body {
+	background: linear-gradient(to bottom, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 72%, rgba(254,254,254,1) 72%, rgba(254,254,254,1) 100%);
+    min-width: 600px;
+}
+
+*, body, input {
+	font-weight: normal;
+	box-sizing:border-box;
+	font-family: "LGSmHaR";
+}
+
+.LblockLogin {
+	position: absolute;
+	top: calc(50% - 250px);
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(to bottom, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 72%, rgba(254,254,254,1) 72%, rgba(254,254,254,1) 100%);
+}
+.LblockLogin > div {width: 100%; max-width: 1000px;padding:0 50px;margin: 0 auto;}
+
+.bi h1 {
+	font-size: 42px;
+	color: #555;
+	line-height: 14px;
+	font-family: "LGSmHaR";
+	color:#ec017e;
+}
+.bi h1 sup {font-size:100%; top:-15px;}
+.bi h1 p {
+	font-family: "LGSmHaR";
+	display:inline-block;
+	color:#555;
+}
+.bi h1 span {
+	display: none;
+}
+
+.loginform {
+    background: url("../images/logo/motif.png") no-repeat;
+    background-position: right 20px bottom 64px;
+}
+.loginform > form {margin-top:80px;width: 340px;}
+.loginform h2 {
+	font-size: 15px;
+	color: #999;
+	margin-bottom: 15px;
+	display: none;
+}
+
+.loginform p.id, .loginform p.pw {
+	/* margin-bottom: 10px; */
+	width: 340px;
+	height: 40px;
+	color: #666;
+	/* border-bottom: 1px solid #aaa; */
+	border-radius: 0 !important;
+}
+.loginform p.pw {
+	font-size: 26px;
+	margin-top: 20px;
+}
+.loginform p.btn {margin-top: 20px;padding: 0;}
+.loginform p input {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #555;
+	font-size: 18px;
+	border: none;
+	background: none;
+	border-bottom: 1px solid #aaa;
+	transition: 0.5s;
+}
+.loginform p input:focus {border-bottom: 1px solid #f92465;}
+.loginform p input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bbb
+}
+
+.loginform p input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bbb;
+}
+.loginform p.pw input {
+	font-size: 20px;
+	color: #777;
+}
+
+.loginform p.btn a {
+	position: relative;
+	width: 115px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 17px;
+	background-color: #293846; /* #f2417b */
+	text-decoration: none;
+	padding: 0 15px;
+	border-radius: 5px;
+	font-family: "LGSmHaR";
+	text-align: left;
+	transition: 0.4s;
+}
+
+.loginform p.btn a:hover {
+	background-color: #000;
+	width: 135px;
+}
+.loginform p.btn a i {position: absolute;right: 10px;}
+.copyright {
+	padding-top: 50px;
+	font-size: 11px;
+	color: #bbb;
+	background: url("../images/logo/lgu_large.png") no-repeat;
+	background-size: 120px;
+	margin-top: 180px;
+}
+
+input:focus {
+	outline:none;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px #f2f2f2 inset;
+}
+
+.login-option {display:flex;align-items: center;justify-content: flex-end;flex-flow: row wrap;width: 190px;margin-top: 22px;}
+.login-option  .input-checkbox {padding: 0 15px;font-size: 1.2em;}
+.login-option .dropdown .btn {height:32px;background: #eaeaea;}
+
+
+#modal-resetPassword .modal-dialog{width:382px;height:480px;}
+#modal-resetPassword .modal-header .close{top:8px;right:10px;}
+#modal-resetPassword .modal-header .close span{top:5px;}
+#modal-resetPassword .modal-body{padding:35px 40px;}
+#modal-resetPassword li h2{margin-bottom:20px;line-height:16px;text-align:left;font-size:1.2rem;}
+#modal-resetPassword li h2 em{display:inline-block;width:16px;height:16px;margin-right:4px;text-align:center;font-size:1.1rem;font-weight:600;color:#fff;}
+#modal-resetPassword li input[type=text]{height:31px;padding:4px 8px 6px;}
+#modal-resetPassword li .btn-inline{height:31px;}
+#modal-resetPassword li:first-child{margin-bottom:22px;border-bottom:1px solid #aaaaaa;}
+#modal-resetPassword li:first-child h2 em{background-color:#f92465;}
+#modal-resetPassword li:first-child .input-group{margin-top:8px;margin-bottom:25px;}
+#modal-resetPassword li:first-child .btn{width:55px;border-color:#202020;background-color:#293846;color:#fff;}
+#modal-resetPassword li:first-child .btn:hover,#modal-resetPassword li:first-child .btn:focus{background-color:#202020;}
+#modal-resetPassword li+li h2 em{background-color:#8394a6;}
+#modal-resetPassword li+li dl{margin-top:-10px;margin-bottom:0;}
+#modal-resetPassword li+li dl:after{content:"";display:inline-block;clear:both;}
+#modal-resetPassword li+li dt,#modal-resetPassword li+li dd{display:inline-block;float:left;height:30px;line-height:30px;}
+#modal-resetPassword li+li dd{margin-left:12px;}
+#modal-resetPassword li+li .input-radio label{cursor:pointer;}
+#modal-resetPassword li+li .input-group{margin-top:8px;}
+#modal-resetPassword li+li .timeCount{width:52px;height:31px;line-height:30px;font-size:1.2rem;color:#202020;}
+#modal-resetPassword .modal-footer{padding:0 40px 35px;}
+#modal-resetPassword .modal-footer .btn-group{width:100%;}
+#modal-resetPassword .modal-footer .btn{width:100%;height:60px;padding:0;margin-top:28px;font-size:1.8rem;font-weight:600;}

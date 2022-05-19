@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko" class="lo_frame">
+<head>
+    <title>LG U+ 아이들 나라 - 메가존개발</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="title" content="유플러스 아이들나라 개발메인">
+    <meta name="description" content="전문가추천 학습시스템, 퀴즈백과 개발페이지 입니다">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="유플러스 아이들나라 개발메인">
+    <meta property="og:description" content="전문가추천 학습시스템, 퀴즈백과 개발페이지 입니다">
+    <meta property="og:url" content="../../iframe_demo.html">
+    <meta property="og:image" content="./img/favicon_16_lgu.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon_16_lgu.ico">
+
+    <!--lgu css-->
+    <link rel="stylesheet" type="text/css" href="../../addon/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../addon/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../addon/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jqueryui/1.12.1/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/daterangepicker/2.1.24/css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/timepicker/0.5.2/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jqueryui/1.12.1/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/1.10.12/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/1.10.12/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/fixedColumns/3.2.2/css/fixedColumns.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/select/1.2.0/css/select.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/buttons/1.2.2/css/buttons.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/datatables/buttons/1.2.2/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../addon/jstree/3.3.3/css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lgu/LGU_style_common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lgu/LGU_style_content.css" />
+
+    <!--new css-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>    
+<body class="ukids ">
+    
+    <div class="wrap_container">
+        <div class="cpnt_lnb">
+            <h1>LMS 어드민</h1>
+            <ul>
+                <li class="active"><a href="curriculum_form.html">커리큘럼 편성관리</a>
+                    <ul>
+                        <li><a href="curriculum_form.html">커리큘럼 편성</a></li>
+                        <li class="active"><a href="curriculum_setting.html">커리큘럼 설정</a></li>
+                    </ul>
+                </li>
+                <li><a href="parents_info.html">부모알림장 관리</a>
+                    <ul>
+                        <li><a href="parents_info.html">학부모 유용정보</a></li>
+                        <li><a href="parents_banner.html">배너</a></li>
+                    </ul>
+                </li>
+                <li><a href="pet_setting.html">펫 관리</a>
+                    <ul>
+                        <li><a href="pet_setting.html">펫 설정</a></li>
+                        <li><a href="pet_list.html">펫 목록</a></li>
+                    </ul>
+                </li>
+                <li><a href="phrase_setting.html">문구 관리</a></li>
+            </ul>
+        </div>
+
+        <div class="cpnt_contents">
+            <div class="cpnt_title">
+                <h1>커리큘럼 설정</h1>
+            </div>
+            
+            <!-- tab-content start -->
+            <div class="cpnt table-content">
+                <table class="table-detail">
+                    <caption>디테일 테이블(1단)</caption>
+                    <colgroup>
+                        <col width="25%" />
+                        <col width="75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><span>커리큘럼 신규 생성 최소 시청 (비율)</span></th>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <th><span>커리큘럼 완료 보상</span></th>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="cpnt btn-block">
+
+                    <ul class="list-inline pull-right">
+                        <li>
+                            <!-- <button class="btn btn-primary"><i class="fa fa-plus"></i><span>등록</span></button> -->
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-confirm-register"><i class="fa fa-plus"></i><span>등록</span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- modal alert01 start -->
+    <div class="cpnt modal alert fade" id="modal-confirm-register" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-default">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>커리큘럼 설정을 등록하시겠습니까?</p>
+                </div>
+                <div class="modal-footer half">
+                    <button type="button" class="btn-full btn-default" data-dismiss="modal" aria-hidden="true">취소</button>
+                    <button type="button" class="btn-full btn-primary" data-dismiss="modal" aria-hidden="true" onclick="$('.cpnt.modal').removeClass('in').hide();">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal alert01 end -->
+
+    <script type="text/javascript" src="../../addon/jquery/3.1.1/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../../addon/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/jqueryui/1.12.1/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/colresize/1.0.7/js/ColReorderWithResize.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/fixedColumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/select/1.2.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../addon/datatables/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+
+    <script type="text/javascript" src="../../js/lgu/LGU_js_common.js"></script>
+    <script src="../../js/style.js"></script>
+    <script type="text/babel">
+         $(document).ready(function() {
+
+         });
+    </script>
+    
+</body>
+</html>
