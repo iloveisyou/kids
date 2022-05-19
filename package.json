@@ -1,5 +1,5 @@
 {
-  "name": "kids_lms_admin",
+  "name": "kids",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -78,5 +78,5 @@
   "devDependencies": {
     "webpack-cli": "^4.9.2"
   },
-  "homepage": "https://mz-fivestring.github.io/kids_lms_admin_publ"
+  "homepage": "https://iloveisyou.github.io/kids"
 }
