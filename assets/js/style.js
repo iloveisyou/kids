@@ -12,7 +12,8 @@ let getUrlParam = (name) => {
 if(getUrlParam("iframeId")){
     if(getUrlParam("iframeId")=="curriculum_form" || getUrlParam("iframeId")=="curriculum_setting" || getUrlParam("iframeId")=="parents_info" || getUrlParam("iframeId")=="parents_banner" || getUrlParam("iframeId")=="pet_setting" || getUrlParam("iframeId")=="pet_list" || getUrlParam("iframeId")=="phrase_setting"){
         //let wrapContainer = document.querySelectorAll("#wrap_container")[0];
-        document.querySelectorAll("#wrap_container")[0].setAttribute("src", "./html/lms/" + getUrlParam("iframeId") + ".html");
+        //document.querySelectorAll("#wrap_container")[0].setAttribute("src", "./html/lms/" + getUrlParam("iframeId") + ".html");
+        document.querySelectorAll("#wrap_container")[0].setAttribute("src", getUrlParam("iframeId") + ".html");
     }   
 }
 
